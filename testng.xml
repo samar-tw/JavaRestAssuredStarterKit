@@ -2,14 +2,15 @@
 <suite name="AllTestsSuite" verbose="1" parallel="false">
 
     <!-- Define a test group within the suite -->
-    <test name="ProductTestSuite">
+    <test name="ProductTestSuite" preserve-order="true">
 
         <!-- Specify classes to include in the test -->
         <classes>
             <!-- Specify the test class and the exact method to run -->
             <class name="com.qa.testing.test.service.users.GetUsers">
                 <methods>
-                    <include name="testGetUsers" />
+                    <include name="getUsersByPageNumberTest" />
+                    <include name="getUserNames"/>
                 </methods>
             </class>
         </classes>

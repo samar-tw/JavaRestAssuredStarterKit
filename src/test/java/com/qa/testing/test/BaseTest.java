@@ -31,12 +31,9 @@ public abstract class BaseTest {
      * Reads 'dev_config.properties' and returns the 'hosturl' property.
      * @return the hosturl property value (e.g., "https://reqres.in").
      */
-    protected static String getHostUrl() {
+    protected String getHostUrl() {
         // Read the 'env' system property (default to "dev" if null)
-        String environment = System.getProperty("env");
-        if (environment == null || environment.isEmpty()) {
-            environment = "dev";
-        }
+        String environment = getEnv();
 
         // Construct the properties file name dynamically
         String propertiesFileName = environment + "_config.properties";
@@ -46,5 +43,20 @@ public abstract class BaseTest {
 
         // Return the hosturl property
         return ConfigManager.getProperty("hosturl");
+    }
+    @BeforeSuite
+    protected static void setTestDataFile() {
+        if (System.getProperty("testDataFile") == null) {
+            String environment = getEnv();
+            String testDataFileNameWithPath = "src/test/resources/testdata/" + environment + "_test_data.json";
+            System.setProperty("testDataFile", testDataFileNameWithPath);
+        }
+    }
+    protected static String getEnv() {
+        String env = System.getProperty("env");
+        if (env == null || env.isEmpty()) {
+            env = "dev"; // Default environment
+        }
+        return env;
     }
 }
