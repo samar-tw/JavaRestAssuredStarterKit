@@ -18,30 +18,6 @@ public abstract class BaseTest {
 //        headers = HeaderUtil.getHeaderNoAuth();
     }
 
-    //Sample for POST Request to be updated with actual data
-    @Test
-    public void testCreateUser() throws Exception {
-        // Load and replace template
-        String jsonTemplate = JsonUtil.loadJson("src/test/resources/request_body_template.json");
-        String[][] replacements = {
-                {"name", "ABC XYZ"},
-                {"email", "abc@example.com"},
-                {"accountNumber", "01234567"}
-        };
-        String requestBody = JsonUtil.replaceJsonPlaceholders(jsonTemplate, replacements);
-
-        // Post call
-        RestAssured
-                .given()
-                .basePath("/api/users")
-                .contentType(ContentType.JSON)
-                .body(requestBody)
-                .when()
-                .post()
-                .then()
-                .statusCode(201); // validate status or more assertions
-    }
-
     protected static Map<String, String> getNoAuthHeaders() {
         return HeaderUtil.getHeaderNoAuth();
     }

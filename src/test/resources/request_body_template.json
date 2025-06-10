@@ -1,6 +1,6 @@
 {
   "name": "{{name}}",
   "email": "{{email}}",
-  "accountNumber": "{{accountNumber}}",
-  "defaultVale": 123
+  "accountNumber": "{{accountBalance}}",
+  "dev_key": 123
 }
