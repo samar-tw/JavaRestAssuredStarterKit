@@ -1,0 +1,6 @@
+{
+  "name": "{{name}}",
+  "email": "{{email}}",
+  "accountNumber": "{{accountBalance}}",
+  "dev_key": 123
+}
