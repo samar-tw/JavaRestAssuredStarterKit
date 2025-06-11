@@ -1,0 +1,17 @@
+{
+  "com.qa.testing.test.service.users.GetUsers": {
+    "getUsersByPageNumberTest": [
+      {
+        "testData": ["2"]
+      },
+      {
+        "testData": ["1"]
+      }
+    ],
+    "getUserNames": [
+      {
+        "testData": ["earth", "mars"]
+      }
+    ]
+  }
+}
