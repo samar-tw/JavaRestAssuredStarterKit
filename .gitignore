@@ -3,6 +3,12 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+.gradle/
+gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle-cache/
+
 ### IntelliJ IDEA ###
 .idea/
 *.iws
