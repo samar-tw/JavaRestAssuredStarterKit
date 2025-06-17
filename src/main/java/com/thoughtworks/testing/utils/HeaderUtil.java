@@ -19,4 +19,18 @@ public class HeaderUtil {
         headers.put("Content-Type", "application/json");
         return headers;
     }
+
+    public static Map<String, String> getHeaderWithApiKey() {
+        String xApiKeyValue = System.getProperty("x-api-key");
+        Map<String, String> headers = new HashMap<>();
+
+        if(xApiKeyValue != null) {
+            headers.put("Content-Type", "application/json");
+            headers.put("x-api-key", xApiKeyValue);
+        }
+        else {
+            System.out.println("API key value is missing");
+        }
+        return headers;
+    }
 }

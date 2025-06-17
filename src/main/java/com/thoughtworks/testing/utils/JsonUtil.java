@@ -20,6 +20,19 @@ public class JsonUtil {
         return json;
     }
 
+    public String updateJsonTemplateWithMapValues(String jsonTemplatePath, Map<String, Object> values) {
+        try {
+            String json = new String(Files.readAllBytes(Paths.get(jsonTemplatePath)));
+            for (Map.Entry<String, Object> entry : values.entrySet()) {
+                String placeholder = "{$" + entry.getKey() + "}";
+                json = json.replace(placeholder, entry.getValue().toString());
+            }
+            return json;
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to read or update JSON template", e);
+        }
+    }
+
     public static Map<String, Object> convertToMap(Object obj) {
         Map<String, Object> result = new HashMap<>();
         for (Field field : obj.getClass().getDeclaredFields()) {

@@ -20,6 +20,11 @@ public class UserService {
         return wsRequest.get(endpoint, headers);
     }
 
+    public Response createNewUser(Map<String, String> headers, String payload) {
+        String endpoint = Constant.UserEndpoints.CREATE_USER;
+        return wsRequest.post(endpoint, headers, payload);
+    }
+
     public Response createUser(Map<String, String> headers, Map<String,Object> userData){
         String endpoint = Constant.UserEndpoints.CREATE_USER;
         String jsonTemplate = null;
