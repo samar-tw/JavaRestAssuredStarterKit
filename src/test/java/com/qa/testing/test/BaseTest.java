@@ -22,6 +22,10 @@ public abstract class BaseTest {
         return HeaderUtil.getHeaderNoAuth();
     }
 
+    protected static Map<String, String> getApiKeyHeader(){
+        return HeaderUtil.getHeaderWithApiKey();
+    }
+
     /**
      * Method to set the RestAssured baseURI.
      */
