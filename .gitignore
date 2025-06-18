@@ -3,6 +3,16 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### Gradle files ###
+.gradle/
+build/
+
+# Logs ###
+*.log
+
+# OS files
+.DS_Store
+
 ### IntelliJ IDEA ###
 .idea/
 *.iws

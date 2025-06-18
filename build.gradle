@@ -1,0 +1,56 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'org.thoughtworks'
+version = '1.0-SNAPSHOT'
+description = 'JavaRestAssuredStarterKit'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.rest-assured:rest-assured:5.5.5'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.0'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'org.testng:testng:7.4.0'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useTestNG {
+        def suiteFile = project.findProperty("suiteXmlFile") ?: "testng.xml"
+        suites suiteFile
+
+        //Enable default listeners for TestNG HTML reports
+        useDefaultListeners = true
+    }
+
+    // Forward the 'apiKey' system property to the test JVM
+    systemProperty 'xApiKey', System.getProperty('xApiKey')
+    systemProperty 'env', System.getProperty('env')
+
+    testLogging {
+        events "passed", "failed", "skipped"
+    }
+
+}
