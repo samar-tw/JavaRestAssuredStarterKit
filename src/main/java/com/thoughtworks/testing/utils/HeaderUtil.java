@@ -21,7 +21,7 @@ public class HeaderUtil {
     }
 
     public static Map<String, String> getHeaderWithApiKey() {
-        String xApiKeyValue = System.getProperty("x-api-key");
+        String xApiKeyValue = System.getProperty("xApiKey");
         Map<String, String> headers = new HashMap<>();
 
         if(xApiKeyValue != null) {

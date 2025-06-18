@@ -9,8 +9,6 @@ import com.thoughtworks.testing.utils.TestDataReader;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import javax.crypto.spec.PSource;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,9 +19,10 @@ public class UsersTest extends BaseTest {
     private final FakerUtil fakerUtil = new FakerUtil();
     private final JsonUtil jsonUtil = new JsonUtil();
 
-    @Test
-    public void testGetUsers() {
-        Response response = userService.getUsersByPageNumber(getNoAuthHeaders(), 2);
+    @Test(dataProvider = "jsonDataProvider", dataProviderClass = TestDataReader.class)
+    public void getUsersByPageNumberTest(String pageNumber) {
+        Response response = userService.getUsersByPageNumber(getApiKeyHeader(), Integer.valueOf
+                (pageNumber));
         Assert.assertEquals(response.getStatusCode(), 200, "Expected status code 200");
     }
 
@@ -47,7 +46,7 @@ public class UsersTest extends BaseTest {
 
     @Test(dataProvider = "jsonDataProvider", dataProviderClass = TestDataReader.class,
     description = "This is test to check names coming from test data file only. It does not make any service call.")
-    public void getUserNames(String name1, String name2) {
+    public void getUserNamesTest(String name1, String name2) {
         Assert.assertEquals(name1, "earth");
         Assert.assertEquals(name2, "mars");
     }

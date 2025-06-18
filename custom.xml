@@ -9,9 +9,9 @@
             <!-- Specify the test class and the exact method to run -->
             <class name="com.qa.testing.test.service.users.UsersTest">
                 <methods>
-                    <include name="getUsersByPageNumberTest" />
+
                     <include name="postNewUserTest"/>
-                    <include name="getUserNamesTest"/>
+
                 </methods>
             </class>
         </classes>
