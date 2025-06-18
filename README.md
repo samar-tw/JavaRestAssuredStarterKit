@@ -48,4 +48,3 @@ You can replace env value by creating properties file under src/main/resources w
 
 ## Useful Commands
 - `./gradlew clean` - Clean build outputs
-- `./gradlew test` - Run all tests
