@@ -47,6 +47,7 @@ test {
 
     // Forward the 'apiKey' system property to the test JVM
     systemProperty 'xApiKey', System.getProperty('xApiKey')
+    systemProperty 'env', System.getProperty('env')
 
     testLogging {
         events "passed", "failed", "skipped"
