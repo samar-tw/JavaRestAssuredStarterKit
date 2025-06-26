@@ -5,6 +5,7 @@ import com.thoughtworks.testing.components.users.User;
 import com.thoughtworks.testing.service.users.UserService;
 import com.thoughtworks.testing.utils.FakerUtil;
 import com.thoughtworks.testing.utils.JsonUtil;
+import com.thoughtworks.testing.utils.Person;
 import com.thoughtworks.testing.utils.TestDataReader;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -34,8 +35,9 @@ public class UsersTest extends BaseTest {
     }
     @Test
     public void postNewUserTest() {
-        String name = fakerUtil.getFakeName();
-        String jobTitle = fakerUtil.getFakeJobTitle();
+        Person person = new Person();
+        String name = person.getFirstName();
+        String jobTitle = person.getJobTitle();
         Map<String, Object> newUserInfo = new HashMap<>();
         newUserInfo.put("name", name);
         newUserInfo.put("job", jobTitle);
