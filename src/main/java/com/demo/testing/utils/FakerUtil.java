@@ -1,7 +1,6 @@
-package com.thoughtworks.testing.utils;
+package com.demo.testing.utils;
 
 import com.github.javafaker.Faker;
-
 import java.util.Locale;
 
 public class FakerUtil {
@@ -13,4 +12,4 @@ public class FakerUtil {
     public String getFakeJobTitle(){
         return Faker.instance(Locale.ENGLISH).job().title();
     }
-}
+} 

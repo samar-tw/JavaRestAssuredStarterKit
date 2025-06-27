@@ -1,19 +1,19 @@
-package com.qa.testing.test.service.users;
+package demo.service.users;
 
 import com.qa.testing.test.BaseTest;
-import com.thoughtworks.testing.components.users.User;
-import com.thoughtworks.testing.service.users.UserService;
-import com.thoughtworks.testing.utils.FakerUtil;
-import com.thoughtworks.testing.utils.JsonUtil;
-import com.thoughtworks.testing.utils.Person;
-import com.thoughtworks.testing.utils.TestDataReader;
+import com.demo.testing.service.users.UserService;
+import com.demo.testing.utils.FakerUtil;
+import com.demo.testing.utils.JsonUtil;
+import com.demo.testing.utils.Person;
+import com.demo.testing.utils.TestDataReader;
+import demo.components.users.User;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.thoughtworks.testing.utils.JsonUtil.convertToMap;
+import static com.demo.testing.utils.JsonUtil.convertToMap;
 
 public class UsersTest extends BaseTest {
     private final UserService userService = new UserService();
@@ -52,4 +52,4 @@ public class UsersTest extends BaseTest {
         Assert.assertEquals(name1, "earth");
         Assert.assertEquals(name2, "mars");
     }
-}
+} 

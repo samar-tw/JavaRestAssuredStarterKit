@@ -1,4 +1,4 @@
-package com.thoughtworks.testing.utils;
+package com.demo.testing.utils;
 
 import com.github.javafaker.Faker;
 import java.util.Locale;
@@ -70,5 +70,4 @@ public class Person {
     public static Person createGeorgianPerson() {
         return new Person();
     }
-}
-
+} 

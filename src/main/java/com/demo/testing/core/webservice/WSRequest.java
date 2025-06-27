@@ -1,4 +1,4 @@
-package com.thoughtworks.testing.core.webservice;
+package com.demo.testing.core.webservice;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -31,4 +31,4 @@ public class WSRequest {
     public Response patch(String endpoint, Map<String, String> headers, String payload) {
         return RestAssured.given().headers(headers).body(payload).patch(endpoint);
     }
-}
+} 

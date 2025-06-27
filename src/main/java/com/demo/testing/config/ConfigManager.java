@@ -1,4 +1,4 @@
-package com.thoughtworks.testing.config;
+package com.demo.testing.config;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -28,4 +28,4 @@ public class ConfigManager {
     public static String getProperty(String key) {
         return props.getProperty(key);
     }
-}
+} 

@@ -1,8 +1,8 @@
 package com.qa.testing.test;
 
-import com.thoughtworks.testing.config.ConfigManager;
-import com.thoughtworks.testing.utils.HeaderUtil;
-import com.thoughtworks.testing.utils.JsonUtil;
+import com.demo.testing.config.ConfigManager;
+import com.demo.testing.utils.HeaderUtil;
+import com.demo.testing.utils.JsonUtil;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.testng.annotations.BeforeSuite;
@@ -66,4 +66,4 @@ public abstract class BaseTest {
         }
         return env;
     }
-}
+} 

@@ -1,4 +1,4 @@
-package com.thoughtworks.testing.utils;
+package com.demo.testing.utils;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -44,4 +44,4 @@ public class TestDataReader {
 
         return data.toArray(new Object[0][]);
     }
-}
+} 

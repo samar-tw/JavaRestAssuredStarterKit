@@ -1,4 +1,4 @@
-package com.thoughtworks.testing.components.users;
+package demo.components.users;
 
 public class User {
     String name;
@@ -10,4 +10,4 @@ public class User {
         this.age = age;
         this.accountBalance = balance;
     }
-}
+} 

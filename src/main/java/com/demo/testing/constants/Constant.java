@@ -1,13 +1,9 @@
-package com.thoughtworks.testing.constants;
+package com.demo.testing.constants;
 
 /**
  * A class to store all the API endpoint constants.
  */
 public class Constant {
-
-//    private Constant() {
-//        // Private constructor to prevent instantiation of this utility class.
-//    }
 
     /**
      * API endpoints related to users.
@@ -28,5 +24,4 @@ public class Constant {
         public static final String UPDATE_PRODUCT = "/api/products/{id}";
         public static final String DELETE_PRODUCT = "/api/products/{id}";
     }
-
-}
+} 

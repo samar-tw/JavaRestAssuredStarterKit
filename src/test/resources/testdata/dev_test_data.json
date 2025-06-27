@@ -1,5 +1,5 @@
 {
-  "com.qa.testing.test.service.users.UsersTest": {
+  "demo.service.users.UsersTest": {
     "getUsersByPageNumberTest": [
       {
         "testData": ["2"]

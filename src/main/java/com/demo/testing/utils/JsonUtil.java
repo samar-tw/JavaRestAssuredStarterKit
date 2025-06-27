@@ -1,4 +1,4 @@
-package com.thoughtworks.testing.utils;
+package com.demo.testing.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -45,4 +45,4 @@ public class JsonUtil {
         }
         return result;
     }
-}
+} 

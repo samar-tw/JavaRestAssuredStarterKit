@@ -1,7 +1,7 @@
-package com.thoughtworks.testing.service.users;
-import com.thoughtworks.testing.constants.Constant;
-import com.thoughtworks.testing.core.webservice.WSRequest;
-import com.thoughtworks.testing.utils.JsonUtil;
+package com.demo.testing.service.users;
+import com.demo.testing.constants.Constant;
+import com.demo.testing.core.webservice.WSRequest;
+import com.demo.testing.utils.JsonUtil;
 import io.restassured.response.Response;
 
 import java.io.IOException;
@@ -36,4 +36,4 @@ public class UserService {
         String payload = JsonUtil.replaceJsonPlaceholders(jsonTemplate, userData);
         return wsRequest.post(endpoint,headers,payload);
     }
-}
+} 

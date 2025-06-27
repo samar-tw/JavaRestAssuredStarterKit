@@ -1,4 +1,4 @@
-package com.thoughtworks.testing.utils;
+package com.demo.testing.utils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +12,6 @@ public class HeaderUtil {
         }
         return headers;
     }
-
 
     public static Map<String, String> getHeaderNoAuth() {
         Map<String, String> headers = new HashMap<>();
@@ -33,4 +32,4 @@ public class HeaderUtil {
         }
         return headers;
     }
-}
+} 
